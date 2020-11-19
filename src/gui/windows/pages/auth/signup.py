@@ -59,15 +59,22 @@ class SignUp(QWidget):
 
             from modules.data.data_context import User
             from datetime import datetime
+            from ....components.message_box import MessageBox
 
             try:
-                User.create(
-                    username=username,
-                    password=password,
-                    created_time=datetime.now()
-                )
+                if username != "" and password != "":
+                    User.create(
+                        username=username,
+                        password=password,
+                        created_time=datetime.now()
+                    )
+                else:
+                    MessageBox(
+                    title="Error",
+                    message=str("please fill both of username and password")
+                ).show()
+                
             except Exception as error:
-                from ....components.message_box import MessageBox
                 MessageBox(
                     title="Error",
                     message=str(error)

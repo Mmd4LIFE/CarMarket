@@ -71,19 +71,25 @@ class SingIn(QWidget):
             from gui.components.message_box import MessageBox
 
             try:
-                user = User.select().where(
-                    (User.username == username) & (User.password == password)
-                )
-                if len(user) > 0:
-                    MessageBox(
-                        title="Sucess",
-                        message="Welcome " + username
-                    ).show()
+                if username != "" and password != "":
+                    user = User.select().where(
+                        (User.username == username) & (User.password == password)
+                    )
+                    if len(user) > 0:
+                        MessageBox(
+                            title="Sucess",
+                            message="Welcome " + username
+                        ).show()
+                    else:
+                        MessageBox(
+                            title="Not Sucess",
+                            message="UnAuthorized"
+                        ).show()
                 else:
                     MessageBox(
-                        title="Not Sucess",
-                        message="UnAuthorized"
-                    ).show()
+                    title="Error",
+                    message=str("please fill both of username and password")
+                ).show()
 
             except Exception as error:
                 MessageBox(
