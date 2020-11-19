@@ -76,10 +76,9 @@ class SingIn(QWidget):
                         (User.username == username) & (User.password == password)
                     )
                     if len(user) > 0:
-                        MessageBox(
-                            title="Sucess",
-                            message="Welcome " + username
-                        ).show()
+                        from ...managerwindow import ManagerWindow
+                        manager_window = ManagerWindow(self)
+                        manager_window.show()
                     else:
                         MessageBox(
                             title="Not Sucess",

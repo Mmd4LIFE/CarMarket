@@ -29,7 +29,7 @@ btn_forgot_password_style = ("btn_forgot_password_style", """
 
 btn_login_style = ("btn_login_style", """
     [accessibleName="btn_login_style"] {
-        color: lightgreen;
+        color: black;
         min-height: 60px;
         max-height: 60px;
         background-color: yellow;

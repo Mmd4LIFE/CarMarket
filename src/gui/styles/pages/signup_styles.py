@@ -17,7 +17,7 @@ q_edit_text_style = ("q_edit_text_style", """
 
 btn_signup_style = ("btn_signup_style", """
     [accessibleName="btn_signup_style"] {
-        color: lightgreen;
+        color: black;
         min-height: 60px;
         max-height: 60px;
         background-color: yellow;
