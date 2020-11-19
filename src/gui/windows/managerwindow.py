@@ -32,6 +32,8 @@ class ManagerWindow(QMainWindow):
         self.setAccessibleName(manager_window_style[0])
         self.setStyleSheet(manager_window_style[1])
 
+        self.__set_centeral_widget_config__()
+
     def __set_centeral_widget_config__(self):
         main_widget = QWidget(self)
         main_widget.setContentsMargins(0, 0, 0, 0)
@@ -39,6 +41,12 @@ class ManagerWindow(QMainWindow):
         main_widget_layout = QGridLayout(main_widget)
         main_widget_layout.setContentsMargins(0, 0, 0, 0)
 
+        from gui.windows.pages.carmanagement.carmanagement import CarManage
+
+        carmanage_page = CarManage(parent=self)
+        main_widget_layout.addWidget(carmanage_page)
+
+        self.setCentralWidget(main_widget)
 
 
 
