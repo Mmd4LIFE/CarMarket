@@ -5,8 +5,9 @@
 
 from PyQt5.QtWidgets import (
     QMainWindow, QWidget, QGridLayout,
-    QApplication
+    QApplication, QLabel
 )
+from PyQt5.QtGui import QFont
 
 from modules.data.data_context import AppContext
 from gui.styles.windows.mainwindow_styles import *
@@ -36,6 +37,7 @@ class MainWindow(QMainWindow):
         self.__set_centeral_widget_config__()
 
     def __set_centeral_widget_config__(self):
+        self.car_market_logo()
         main_widget = QWidget(self)
         main_widget.setContentsMargins(0, 0, 0, 0)
 
@@ -57,6 +59,15 @@ class MainWindow(QMainWindow):
         main_widget_layout.addWidget(signup_page)
 
         self.setCentralWidget(main_widget)
+
+    #TODO -> set CarMarket Logo
+    def car_market_logo(self):
+        Logo = QLabel(self)
+        Logo.setText("CarMarket")
+        Logo.setFont(QFont('Times', 25))
+        Logo.setAccessibleName(lable_car_market_logo_style[0])
+        Logo.setStyleSheet(lable_car_market_logo_style[1])
+    
 
     def execute_app(self):
         AppContext()

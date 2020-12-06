@@ -5,6 +5,6 @@
 
 manager_window_style = ("manager_window_style", """
     [accessibleName="manager_window_style"] {
-        background-color: #550f65;
+        background-color: #0e28ec;
     }
 """)

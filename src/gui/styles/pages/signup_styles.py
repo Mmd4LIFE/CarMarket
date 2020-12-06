@@ -17,10 +17,10 @@ q_edit_text_style = ("q_edit_text_style", """
 
 btn_signup_style = ("btn_signup_style", """
     [accessibleName="btn_signup_style"] {
-        color: black;
+        color: #ffffcc;
         min-height: 60px;
         max-height: 60px;
-        background-color: yellow;
+        background-color: #17059e;
         margin-bottom: 170px;
         margin-right: 80px;
         margin-left: 80px;

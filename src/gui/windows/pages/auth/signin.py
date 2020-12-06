@@ -26,6 +26,8 @@ class SingIn(QWidget):
         self.main_layout.addStretch(0)
         self.main_layout.setAlignment(Qt.AlignHCenter)
 
+        self.parent = parent
+
         self.__init_ui__()
 
     def __init_ui__(self):
@@ -77,7 +79,8 @@ class SingIn(QWidget):
                     )
                     if len(user) > 0:
                         from ...managerwindow import ManagerWindow
-                        manager_window = ManagerWindow(self)
+                        manager_window = ManagerWindow(self.parent)
+                        self.parent.hide()
                         manager_window.show()
                     else:
                         MessageBox(

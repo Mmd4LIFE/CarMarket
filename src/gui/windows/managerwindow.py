@@ -7,6 +7,8 @@ from PyQt5.QtWidgets import (
     QMainWindow, QWidget, QGridLayout,
     QApplication
 )
+from PyQt5.QtGui import QCloseEvent
+import sys
 
 from gui.styles.windows.managerwindow_styles import *
 
@@ -26,6 +28,8 @@ class ManagerWindow(QMainWindow):
             int((screen_size.height() - 600) / 2),
             0, 0
         )
+
+        self.parent = parent
 
         self.setContentsMargins(0, 0, 0, 0)
 
@@ -47,6 +51,10 @@ class ManagerWindow(QMainWindow):
         main_widget_layout.addWidget(carmanage_page)
 
         self.setCentralWidget(main_widget)
+
+
+    def closeEvent(self, a0: QCloseEvent) -> None:
+        self.parent.show()
 
 
 

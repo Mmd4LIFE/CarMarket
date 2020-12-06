@@ -19,7 +19,7 @@ class CarManage(QWidget):
         self.setContentsMargins(0, 0, 0, 0)
 
         self.main_layout = QVBoxLayout()
-        self.main_layout.setContentsMargins(0, 0, 0, 0)
+        self.main_layout.setContentsMargins(0, 0, 500, 200)
         self.main_layout.addStretch(0)
         self.main_layout.setAlignment(Qt.AlignHCenter)
 
