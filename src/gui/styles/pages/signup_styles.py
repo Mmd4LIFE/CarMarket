@@ -5,11 +5,12 @@
 
 q_edit_text_style = ("q_edit_text_style", """
     [accessibleName="q_edit_text_style"] {
-        color: black;
+        color: #ffffcc;
         min-width: 300px;
         max-width: 300px;
         min-height: 40px;
         max-height: 40px;
+        background-color: #000066;
         margin-bottom: 10px;
     }
 """)
